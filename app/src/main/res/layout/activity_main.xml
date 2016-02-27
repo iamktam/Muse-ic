@@ -41,4 +41,25 @@
         android:layout_toRightOf="@+id/happyButton"
         android:layout_marginLeft="27dp" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/playButton"
+        android:layout_below="@+id/happyButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/pauseButton"
+        android:layout_alignBottom="@+id/playButton"
+        android:layout_alignLeft="@+id/sadButton"
+        android:layout_alignStart="@+id/sadButton" />
+
 </RelativeLayout>
