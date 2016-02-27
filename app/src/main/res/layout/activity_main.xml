@@ -62,4 +62,13 @@
         android:layout_alignLeft="@+id/sadButton"
         android:layout_alignStart="@+id/sadButton" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/debug_label"
+        android:layout_below="@+id/playButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="77dp" />
+
 </RelativeLayout>

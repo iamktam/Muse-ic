@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Users\Kelvin\AndroidStudioProjects\Muse-ic\app\libs\myo-android-sdk-0.10.0\samples\HelloWorld\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\libs\native-libs.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d24ac9790966ffbd1bd9d921a262572c94903027">
+        <dex dex="D:\Users\Kelvin\AndroidStudioProjects\Muse-ic\app\libs\myo-android-sdk-0.10.0\samples\HelloWorld\build\intermediates\pre-dexed\debug\native-libs-a63f3a757e3f5cb63a0068504494f78ca9a58478.jar" />
+    </item>
+    <item
+        jar="D:\Users\Kelvin\AndroidStudioProjects\Muse-ic\app\libs\myo-android-sdk-0.10.0\samples\HelloWorld\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="D:\Users\Kelvin\AndroidStudioProjects\Muse-ic\app\libs\myo-android-sdk-0.10.0\samples\HelloWorld\build\intermediates\pre-dexed\debug\classes-3c2669f8fdab80dd11a399ec02e6b18ff8b900d3.jar" />
+    </item>
+
+</items>
