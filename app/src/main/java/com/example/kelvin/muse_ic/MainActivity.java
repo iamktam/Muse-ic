@@ -1,9 +1,11 @@
 package com.example.kelvin.muse_ic;
 
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,8 +14,12 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        populateButton();
     }
 
+    private void populateButton() {
+        ImageButton hButton = (ImageButton)
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
