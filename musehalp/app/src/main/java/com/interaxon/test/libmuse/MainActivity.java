@@ -85,9 +85,9 @@ public class MainActivity extends Activity implements OnClickListener {
         public void receiveMuseConnectionPacket(MuseConnectionPacket p) {
             final ConnectionState current = p.getCurrentConnectionState();
             final String status = p.getPreviousConnectionState().toString() +
-                         " -> " + current;
+                    " -> " + current;
             final String full = "Muse " + p.getSource().getMacAddress() +
-                                " " + status;
+                    " " + status;
             Log.i("Muse Headband", full);
             Activity activity = activityRef.get();
             // UI thread is used here only because we need to update
@@ -106,8 +106,8 @@ public class MainActivity extends Activity implements OnClickListener {
                         if (current == ConnectionState.CONNECTED) {
                             MuseVersion museVersion = muse.getMuseVersion();
                             String version = museVersion.getFirmwareType() +
-                                 " - " + museVersion.getFirmwareVersion() +
-                                 " - " + Integer.toString(
+                                    " - " + museVersion.getFirmwareVersion() +
+                                    " - " + Integer.toString(
                                     museVersion.getProtocolVersion());
                             museVersionText.setText(version);
                         } else {
@@ -139,28 +139,30 @@ public class MainActivity extends Activity implements OnClickListener {
 
         @Override
         public void receiveMuseDataPacket(MuseDataPacket p) {
-//            System.out.println(p.getPacketType());
+            System.out.println(p.getPacketType());
             switch (p.getPacketType()) {
-                case EEG:
-                    updateEeg(p.getValues());
-                    break;
-                case ALPHA_ABSOLUTE:
-                    System.out.println("~~~~WORKPLSFKJSJDFKLSDJF");
-                    updateGammaRelative(p.getValues());
-                    break;
+//                case EEG:
+//                    updateEeg(p.getValues());
+//                    break;
                 case ACCELEROMETER:
                     updateAccelerometer(p.getValues());
                     break;
-                case ALPHA_RELATIVE:
-                    updateAlphaRelative(p.getValues());
-                    break;
+//                case ALPHA_RELATIVE:
+//                    updateAlphaRelative(p.getValues());
+//                    break;
                 case BATTERY:
                     fileWriter.addDataPacket(1, p);
                     // It's library client responsibility to flush the buffer,
-                    // otherwise you may get memory overflow. 
+                    // otherwise you may get memory overflow.
                     if (fileWriter.getBufferedMessagesSize() > 8096)
                         fileWriter.flush();
                     break;
+                case GAMMA_RELATIVE:
+                    updateGammaRelative(p.getValues());
+                    break;
+//                case HORSESHOE:
+//                    updateHorseshoe(p.getValues());
+//                    break;
                 default:
                     break;
             }
@@ -183,61 +185,61 @@ public class MainActivity extends Activity implements OnClickListener {
                         TextView acc_y = (TextView) findViewById(R.id.acc_y);
                         TextView acc_z = (TextView) findViewById(R.id.acc_z);
                         acc_x.setText(String.format(
-                            "%6.2f", data.get(Accelerometer.FORWARD_BACKWARD.ordinal())));
+                                "%6.2f", data.get(Accelerometer.FORWARD_BACKWARD.ordinal())));
                         acc_y.setText(String.format(
-                            "%6.2f", data.get(Accelerometer.UP_DOWN.ordinal())));
+                                "%6.2f", data.get(Accelerometer.UP_DOWN.ordinal())));
                         acc_z.setText(String.format(
-                            "%6.2f", data.get(Accelerometer.LEFT_RIGHT.ordinal())));
+                                "%6.2f", data.get(Accelerometer.LEFT_RIGHT.ordinal())));
                     }
                 });
             }
         }
 
-        private void updateEeg(final ArrayList<Double> data) {
-            Activity activity = activityRef.get();
-            if (activity != null) {
-                activity.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                         TextView tp9 = (TextView) findViewById(R.id.eeg_tp9);
-                         TextView fp1 = (TextView) findViewById(R.id.eeg_fp1);
-                         TextView fp2 = (TextView) findViewById(R.id.eeg_fp2);
-                         TextView tp10 = (TextView) findViewById(R.id.eeg_tp10);
-                         tp9.setText(String.format(
-                            "%6.2f", data.get(Eeg.TP9.ordinal())));
-                         fp1.setText(String.format(
-                            "%6.2f", data.get(Eeg.FP1.ordinal())));
-                         fp2.setText(String.format(
-                            "%6.2f", data.get(Eeg.FP2.ordinal())));
-                         tp10.setText(String.format(
-                            "%6.2f", data.get(Eeg.TP10.ordinal())));
-                    }
-                });
-            }
-        }
-
-        private void updateAlphaRelative(final ArrayList<Double> data) {
-            Activity activity = activityRef.get();
-            if (activity != null) {
-                activity.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                         TextView elem1 = (TextView) findViewById(R.id.elem1);
-                         TextView elem2 = (TextView) findViewById(R.id.elem2);
-                         TextView elem3 = (TextView) findViewById(R.id.elem3);
-                         TextView elem4 = (TextView) findViewById(R.id.elem4);
-                         elem1.setText(String.format(
-                            "%6.2f", data.get(Eeg.TP9.ordinal())));
-                         elem2.setText(String.format(
-                            "%6.2f", data.get(Eeg.FP1.ordinal())));
-                         elem3.setText(String.format(
-                            "%6.2f", data.get(Eeg.FP2.ordinal())));
-                         elem4.setText(String.format(
-                            "%6.2f", data.get(Eeg.TP10.ordinal())));
-                    }
-                });
-            }
-        }
+//        private void updateEeg(final ArrayList<Double> data) {
+//            Activity activity = activityRef.get();
+//            if (activity != null) {
+//                activity.runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        TextView tp9 = (TextView) findViewById(R.id.eeg_tp9);
+//                        TextView fp1 = (TextView) findViewById(R.id.eeg_fp1);
+//                        TextView fp2 = (TextView) findViewById(R.id.eeg_fp2);
+//                        TextView tp10 = (TextView) findViewById(R.id.eeg_tp10);
+//                        tp9.setText(String.format(
+//                                "%6.2f", data.get(Eeg.TP9.ordinal())));
+//                        fp1.setText(String.format(
+//                                "%6.2f", data.get(Eeg.FP1.ordinal())));
+//                        fp2.setText(String.format(
+//                                "%6.2f", data.get(Eeg.FP2.ordinal())));
+//                        tp10.setText(String.format(
+//                                "%6.2f", data.get(Eeg.TP10.ordinal())));
+//                    }
+//                });
+//            }
+//        }
+//
+//        private void updateAlphaRelative(final ArrayList<Double> data) {
+//            Activity activity = activityRef.get();
+//            if (activity != null) {
+//                activity.runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        TextView elem1 = (TextView) findViewById(R.id.elem1);
+//                        TextView elem2 = (TextView) findViewById(R.id.elem2);
+//                        TextView elem3 = (TextView) findViewById(R.id.elem3);
+//                        TextView elem4 = (TextView) findViewById(R.id.elem4);
+//                        elem1.setText(String.format(
+//                                "%6.2f", data.get(Eeg.TP9.ordinal())));
+//                        elem2.setText(String.format(
+//                                "%6.2f", data.get(Eeg.FP1.ordinal())));
+//                        elem3.setText(String.format(
+//                                "%6.2f", data.get(Eeg.FP2.ordinal())));
+//                        elem4.setText(String.format(
+//                                "%6.2f", data.get(Eeg.TP10.ordinal())));
+//                    }
+//                });
+//            }
+//        }
 
         private void updateGammaRelative(final ArrayList<Double> data) {
             Activity activity = activityRef.get();
@@ -249,6 +251,10 @@ public class MainActivity extends Activity implements OnClickListener {
                         TextView gamma2 = (TextView) findViewById(R.id.gamma2);
                         TextView gamma3 = (TextView) findViewById(R.id.gamma3);
                         TextView gamma4 = (TextView) findViewById(R.id.gamma4);
+                        TextView avg_gamma = (TextView) findViewById(R.id.avg_gamma);
+                        double avg = ( data.get(Eeg.TP9.ordinal()) + data.get(Eeg.FP1.ordinal()) +
+                                data.get(Eeg.FP2.ordinal()) + data.get(Eeg.TP10.ordinal()) ) /
+                                (double) 4;
                         gamma1.setText(String.format(
                                 "%6.2f", data.get(Eeg.TP9.ordinal())));
                         gamma2.setText(String.format(
@@ -256,6 +262,31 @@ public class MainActivity extends Activity implements OnClickListener {
                         gamma3.setText(String.format(
                                 "%6.2f", data.get(Eeg.FP2.ordinal())));
                         gamma4.setText(String.format(
+                                "%6.2f", data.get(Eeg.TP10.ordinal())));
+                        avg_gamma.setText(String.format(
+                                "%6.2f", avg));
+                    }
+                });
+            }
+        }
+
+        private void updateHorseshoe(final ArrayList<Double> data) {
+            Activity activity = activityRef.get();
+            if (activity != null) {
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        TextView horse1 = (TextView) findViewById(R.id.horse1);
+                        TextView horse2 = (TextView) findViewById(R.id.horse2);
+                        TextView horse3 = (TextView) findViewById(R.id.horse3);
+                        TextView horse4 = (TextView) findViewById(R.id.horse4);
+                        horse1.setText(String.format(
+                                "%6.2f", data.get(Eeg.TP9.ordinal())));
+                        horse2.setText(String.format(
+                                "%6.2f", data.get(Eeg.FP1.ordinal())));
+                        horse3.setText(String.format(
+                                "%6.2f", data.get(Eeg.FP2.ordinal())));
+                        horse4.setText(String.format(
                                 "%6.2f", data.get(Eeg.TP10.ordinal())));
                     }
                 });
@@ -276,7 +307,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public MainActivity() {
         // Create listeners and pass reference to activity to them
         WeakReference<Activity> weakActivity =
-                                new WeakReference<Activity>(this);
+                new WeakReference<Activity>(this);
 
         connectionListener = new ConnectionListener(weakActivity);
         dataListener = new DataListener(weakActivity);
@@ -306,7 +337,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
         File dir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         fileWriter = MuseFileFactory.getMuseFileWriter(
-                     new File(dir, "new_muse_file.muse"));
+                new File(dir, "new_muse_file.muse"));
         Log.i("Muse Headband", "libmuse version=" + LibMuseVersion.SDK_VERSION);
         fileWriter.addAnnotationString(1, "MainActivity onCreate");
         dataListener.setFileWriter(fileWriter);
@@ -331,16 +362,16 @@ public class MainActivity extends Activity implements OnClickListener {
         else if (v.getId() == R.id.connect) {
             List<Muse> pairedMuses = MuseManager.getPairedMuses();
             if (pairedMuses.size() < 1 ||
-                musesSpinner.getAdapter().getCount() < 1) {
+                    musesSpinner.getAdapter().getCount() < 1) {
                 Log.w("Muse Headband", "There is nothing to connect to");
             }
             else {
                 muse = pairedMuses.get(musesSpinner.getSelectedItemPosition());
                 ConnectionState state = muse.getConnectionState();
                 if (state == ConnectionState.CONNECTED ||
-                    state == ConnectionState.CONNECTING) {
+                        state == ConnectionState.CONNECTING) {
                     Log.w("Muse Headband",
-                    "doesn't make sense to connect second time to the same muse");
+                            "doesn't make sense to connect second time to the same muse");
                     return;
                 }
                 configureLibrary();
@@ -401,8 +432,8 @@ public class MainActivity extends Activity implements OnClickListener {
             int id = fileReader.getMessageId();
             long timestamp = fileReader.getMessageTimestamp();
             Log.i(tag, "type: " + type.toString() +
-                  " id: " + Integer.toString(id) +
-                  " timestamp: " + String.valueOf(timestamp));
+                    " id: " + Integer.toString(id) +
+                    " timestamp: " + String.valueOf(timestamp));
             switch(type) {
                 case EEG: case BATTERY: case ACCELEROMETER: case QUANTIZATION:
                     MuseDataPacket packet = fileReader.getDataPacket();
@@ -430,15 +461,19 @@ public class MainActivity extends Activity implements OnClickListener {
     private void configureLibrary() {
         muse.registerConnectionListener(connectionListener);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.ACCELEROMETER);
+                MuseDataPacketType.ACCELEROMETER);
+//        muse.registerDataListener(dataListener,
+//                MuseDataPacketType.EEG);
+//        muse.registerDataListener(dataListener,
+//                MuseDataPacketType.ALPHA_RELATIVE);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.EEG);
+                MuseDataPacketType.ARTIFACTS);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.ALPHA_RELATIVE);
+                MuseDataPacketType.BATTERY);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.ARTIFACTS);
+                MuseDataPacketType.GAMMA_RELATIVE);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.BATTERY);
+                MuseDataPacketType.HORSESHOE);
         muse.setPreset(MusePreset.PRESET_14);
         muse.enableDataTransmission(dataTransmission);
     }

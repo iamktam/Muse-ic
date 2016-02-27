@@ -18,6 +18,7 @@
     <string name="pause">Pause/Resume</string>
     <string name="drop">Drop</string>
     <string name="muse_elem">Elements:</string>
+    <string name="horseshoe">Connection point quality (1 good, 2 ok, >=3 bad):</string>
 
     <string name="gamma">Relative Gamma values:</string>
 

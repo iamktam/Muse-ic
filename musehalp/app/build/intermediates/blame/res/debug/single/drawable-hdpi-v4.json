@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Jessica Dou\\StudioProjects\\Muse-ic\\musehalp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Jessica Dou\\StudioProjects\\Muse-ic\\musehalp\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Jessica Dou\\StudioProjects\\TestLibMuseAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Jessica Dou\\StudioProjects\\TestLibMuseAndroid\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     }

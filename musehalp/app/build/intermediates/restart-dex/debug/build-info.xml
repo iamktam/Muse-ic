@@ -1,32 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="21"
-    density="xxhdpi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="420dpi"
     format="6"
-    timestamp="476580375693211" >
+    timestamp="487669279852067" >
 
     <task
         name="javac"
-        duration="1269" />
+        duration="339" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="110" />
+        duration="203" />
     <task
         name="verifier"
-        duration="25" />
+        duration="28" />
 
     <artifact
-        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5_f5febe9340d68d9c4b28fc0cc908f184d5c31695\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6_b8b4ec6cc17164897589bddbac4af8c481824442\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8_43d4a9ddb20a943b3fb27936914f269078b9b5d4\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7_14f63096321ff17d200cbbc9e66f54875e208be1\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2_1fa0fc07c048363b2ced1aada76f39a0aa5728a7\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3_887e49c113f355bf66aec6f964ec825bd744adbe\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0_610bf67fe0dfb963bfeea4ceddd36caabfab7bb2\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1_9d5d8fb5d9e1460fa66580fca343a07b9553bf09\classes.dex"
+        type="DEX" />
 
-    <build timestamp="476580375693211" >
+    <build timestamp="487480296267304" >
         <artifact
             location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="487669279852067" >
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5_f5febe9340d68d9c4b28fc0cc908f184d5c31695\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6_b8b4ec6cc17164897589bddbac4af8c481824442\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8_43d4a9ddb20a943b3fb27936914f269078b9b5d4\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7_14f63096321ff17d200cbbc9e66f54875e208be1\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2_1fa0fc07c048363b2ced1aada76f39a0aa5728a7\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3_887e49c113f355bf66aec6f964ec825bd744adbe\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0_610bf67fe0dfb963bfeea4ceddd36caabfab7bb2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1_9d5d8fb5d9e1460fa66580fca343a07b9553bf09\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
