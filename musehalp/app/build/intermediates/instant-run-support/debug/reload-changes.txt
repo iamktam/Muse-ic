@@ -1,0 +1,13 @@
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$DataListener$2$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\R$string$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\R$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$DataListener$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\R$layout$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$1$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\R$id$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$DataListener$1$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\R$menu$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\R$style$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$ConnectionListener$1$override.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$override.class
