@@ -5,7 +5,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,11 +18,36 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        populateButton();
+        createButtonListeners();
     }
 
-    private void populateButton() {
-        ImageButton hButton = (ImageButton)
+    private void createButtonListeners() {
+        ImageButton hButton = (ImageButton) findViewById(R.id.happyButton);
+        ImageButton sButton = (ImageButton) findViewById(R.id.sadButton);
+
+        hButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonClicked(0);
+            }
+        });
+        sButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonClicked(1);
+            }
+
+        });
+
+    }
+
+    private void buttonClicked(int i) {
+        TextView t = (TextView) findViewById(R.id.current_mood);
+        if (i) {
+            t.setText("Sad");
+        } else {
+            t.setText("Happy");
+        }
     }
 
     @Override
