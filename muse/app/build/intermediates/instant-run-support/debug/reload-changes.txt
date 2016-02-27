@@ -1,0 +1,2 @@
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Jessica Dou\StudioProjects\TestLibMuseAndroid\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\interaxon\test\libmuse\MainActivity$DataListener$override.class
