@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -46,8 +45,6 @@ public class MainActivity extends Activity implements
     private void createButtonListeners() {
         ImageButton hButton = (ImageButton) findViewById(R.id.happyButton);
         ImageButton sButton = (ImageButton) findViewById(R.id.sadButton);
-        Button playButton = (Button) findViewById(R.id.playButton);
-        Button pauseButton = (Button) findViewById(R.id.pauseButton);
 
         hButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,38 +59,22 @@ public class MainActivity extends Activity implements
             }
 
         });
-        pauseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonClicked(3);
-            }
-
-        });
-        playButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonClicked(2);
-            }
-
-        });
 
     }
 
     private void buttonClicked(int i) {
         TextView t = (TextView) findViewById(R.id.current_mood);
         mPlayer.setShuffle(true);
-        if (i == 0) {
-            //happy
-            mPlayer.play("spotify:user:1215411810:playlist:7tDZt6ANIqgBeDaR6lHqqt");
-        } else if (i == 1) {
+        if (i == 1) {
             //sad
+            mPlayer.addConnectionStateCallback(MainActivity.this);
+            mPlayer.addPlayerNotificationCallback(MainActivity.this);
             mPlayer.play("spotify:user:1215411810:playlist:4sWnTsWWXrGtTRdPgjTpFu");
-        } else if (i == 2) {
-            //play
-            mPlayer.resume();
-        } else if (i == 3) {
-            //pause
-            mPlayer.pause();
+        } else {
+            //happy
+            mPlayer.addConnectionStateCallback(MainActivity.this);
+            mPlayer.addPlayerNotificationCallback(MainActivity.this);
+            mPlayer.play("spotify:user:1215411810:playlist:7tDZt6ANIqgBeDaR6lHqqt");
         }
     }
 
@@ -146,8 +127,9 @@ public class MainActivity extends Activity implements
                 mPlayer = Spotify.getPlayer(playerConfig, this, new Player.InitializationObserver() {
                     @Override
                     public void onInitialized(Player player) {
-                        mPlayer.addConnectionStateCallback(MainActivity.this);
-                        mPlayer.addPlayerNotificationCallback(MainActivity.this);
+//                        mPlayer.addConnectionStateCallback(MainActivity.this);
+//                        mPlayer.addPlayerNotificationCallback(MainActivity.this);
+//                        mPlayer.play("spotify:user:1215411810:playlist:4sWnTsWWXrGtTRdPgjTpFu");
                     }
 
                     @Override

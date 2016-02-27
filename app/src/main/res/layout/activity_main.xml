@@ -41,6 +41,7 @@
         android:layout_toRightOf="@+id/happyButton"
         android:layout_marginLeft="27dp" />
 
+<<<<<<< HEAD
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -71,4 +72,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="77dp" />
 
+=======
+>>>>>>> parent of 5f7d0a9... play/pause functionality
 </RelativeLayout>
